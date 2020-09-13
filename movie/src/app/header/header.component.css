@@ -1,0 +1,33 @@
+
+.header {
+  width: 100%;
+  height: var(--header-height);
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.logo {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 45px;
+  color: var(--color-dark);
+}
+
+.button {
+  width: auto;
+  height: 50px;
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: capitalize;
+  line-height: 40px;
+  background: none;
+  color: var(--color-dark);
+  border: solid 5px var(--color-dark);
+  border-radius: 25px;
+  transition: 0.2s;
+}

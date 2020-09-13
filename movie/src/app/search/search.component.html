@@ -1,0 +1,24 @@
+<!-- <div class="container results-container">
+  <div [formGroup]="searchForm" >
+  <div class="row justify-content-center">
+    <div class="col-sm-8  justify-content-center">
+      <div class="input-group input-group-md justify-content-center">
+        <input #search id="search-input" (keyup.enter)="onEnter(search.value)" formControlName="searchInput" type="text" class="shadow form-control" placeholder="Search for your movie..." aria-label="Search for your movie..." autofocus>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="container results-container">
+    <div [formGroup]="searchForm">
+<div class="input-group-prepend border-0">
+    <input #search id="search-input" class="shadow form-control" type="text" (keyup.enter)="onEnter(search.value)" formControlName="searchInput" placeholder="Search for your movie...">
+    <div class="input-group-append btn2">
+      <button class="btn btn-primary" type="button" id="button2">Search</button>
+    </div>
+  </div>
+  </div>
+</div>
