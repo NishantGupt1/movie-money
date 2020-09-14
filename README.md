@@ -11,3 +11,5 @@ To visualize your movie data, navigate to the `movie` folder and run
 ng serve
 ```
 
+<p align="center"><img src="https://i.imgur.com/wulPxzP.png" alt="PNG"></p>
+
