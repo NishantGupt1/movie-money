@@ -13,9 +13,23 @@
   margin-bottom: 7px;
   font-size: 25px;
   font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .card-img-top {
   width: 80%;
   margin-bottom: 10px;
 }
+
+.card-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.text-muted {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+}
+

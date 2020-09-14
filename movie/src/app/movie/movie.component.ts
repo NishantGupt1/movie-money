@@ -12,6 +12,9 @@ export class MovieComponent implements OnInit {
   chart: Chart
   productionCosts: number = 0
   earnings: number = 0
+  revenue: string = ''
+  title: string = ''
+  isEmptyRevenue = true
   constructor(private searchService: SearchService) { }
 
   ngOnInit(): void {
@@ -23,12 +26,12 @@ export class MovieComponent implements OnInit {
                 label: 'Movie Production Cost vs Earnings',
                 data: [this.productionCosts, this.earnings],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
+                    'skyblue',
+                    'skyblue',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
+                    'black',
+                    'black',
                 ],
                 borderWidth: 1
             }]
@@ -48,10 +51,10 @@ export class MovieComponent implements OnInit {
         }
     });
     this.searchService.movie$.subscribe(movieData => {
-        console.log('movieData.budget')
-        console.log(movieData.budget)
+        this.title = movieData.title
         this.productionCosts = movieData.budget
         this.earnings = movieData.revenue
+        this.revenue = (movieData.revenue - movieData.budget).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
         this.chart.data.datasets[0].data[0] = this.productionCosts
         this.chart.data.datasets[0].data[1] = this.earnings
         this.chart.update()

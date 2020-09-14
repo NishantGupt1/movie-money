@@ -22,7 +22,7 @@ export class MovieDetailsComponent implements OnInit {
         console.log('grabbing movie details..')
       this.movieTitle = movieData.title || ''
       this.posterPath = 'https://image.tmdb.org/t/p/w500' + movieData.poster_path
-      this.releaseDate = this.datePipe.transform(movieData.release_date, 'dd/MM/yyyy')
+      this.releaseDate = this.datePipe.transform(movieData.release_date, 'MM/dd/yyyy')
       this.movieDescription = movieData.overview
       console.log(this.posterPath)
       }

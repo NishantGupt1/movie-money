@@ -5,10 +5,17 @@
   padding: 5px;
   display: flex;
   justify-content: space-between;
-
+  margin-bottom: 10px;
 }
-.logo {
+
+.logo-text {
+  font-family: 'Courier New', Courier, monospace;
   font-size: 40px;
+}
+
+.logo {
+  margin-top: 10px;
+  font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 45px;
@@ -16,6 +23,7 @@
 }
 
 .button {
+  padding-top: 20px;
   width: auto;
   height: 50px;
   display: inline-block;
